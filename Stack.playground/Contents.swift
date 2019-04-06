@@ -1,16 +1,16 @@
 import Foundation
-import Foundation
 class Stack<T> {
   
   var stackArray = [T]()
   
   func push(element : T) {
-    //    print("element\(element)")
     self.stackArray.append(element)
   }
   
   func pop() {
-    stackArray.removeLast()
+    if !stackArray.isEmpty{
+      stackArray.removeLast()
+    }
   }
   
   func top() -> T? {
@@ -25,7 +25,6 @@ class Stack<T> {
   }
   
   func printStack(){
-    print("inside")
     stackArray.forEach({ (e) in
       print("e\(e)")
     })    
